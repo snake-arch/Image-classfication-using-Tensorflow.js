@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>    <!-- Load the MobileNet model. -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+<title>Image classification using tensorflow.js</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <!-- Load index.js after the content of the page -->
+<script src="index.js"></script>
+</head>
+<body>
+    <main>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-6">
+                    <input id="image-selector" class="form-control border-0" type="file" onchange="PreviewImage();"/>
+                </div>
+                <div class="col-6">
+                    <button id="predict-button" class="btn btn-dark float-right" onclick="getPred()">Predict</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <h2 class="ml-3">Image</h2>
+                    <img id="selected-image" style="width: 250px; height: 250px;" class="ml-3" src="#" />
+                </div>
+                <div class="col-6">
+                    <h2 class="ml-3">Predictions</h2>
+                    <ol id="prediction-list"></ol>
+                </div>
+            </div>
+        </div>
+    </main>    
+</body>
+</html>
